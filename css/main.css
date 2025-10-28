@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.fullContainer {
+  width: 100%;
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.container section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container section > p {
+  font-size: 1.4rem;
+}
+
+header.fullContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: rgb(54, 54, 54);
+  color: white;
+  margin-bottom: 15px;
+}
+
+header.fullContainer p {
+  font-size: 2.2rem;
+}
+
+.imgContainer {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.imagenGrande.imgContainer > img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.imgRelacionadas .imgContainer > img {
+  border-radius: 10px;
+  width: 100%;
+  transition: 0.3s ease-in-out;
+}
+
+.container section * {
+  margin-bottom: 15px;
+}
+
+.botones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0 10px;
+}
+
+.btn {
+  padding: 10px 15px;
+  border-radius: 12px;
+  background-color: rgb(44, 44, 44);
+  color: white;
+  transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: rgb(85, 85, 85);
+}
+
+.imgRelacionadas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0 20px;
+}
+
+.imgRelacionadas > article {
+  text-align: center;
+}
+
+.imgRelacionadas > article .imgContainer img:hover {
+  cursor: pointer;
+  filter: brightness(70%);
+  scale: calc(0.95);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  background-color: rgb(54, 54, 54);
+  color: white;
+}
+
+/* ----- MEDIA 768px ----- */
+@media screen and (min-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  header.fullContainer p {
+    font-size: 2.6rem;
+  }
+
+  .container section > p {
+    font-size: 1.8rem;
+  }
+
+  .imgContainer {
+    width: 80%;
+  }
+}
+
+/* ----- MEDIA 1200px ----- */
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1300px;
+  }
+
+  .container section > p {
+    font-size: 2rem;
+  }
+
+  header.fullContainer p {
+    font-size: 3rem;
+  }
+
+  .imgContainer {
+    width: 60%;
+  }
+}
