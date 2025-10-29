@@ -99,6 +99,10 @@ header.fullContainer p {
   scale: calc(0.95);
 }
 
+.bold {
+  font-weight: 800;
+}
+
 footer {
   display: flex;
   justify-content: center;

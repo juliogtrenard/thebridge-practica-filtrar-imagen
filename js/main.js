@@ -100,10 +100,10 @@ document.addEventListener("DOMContentLoaded", () => {
       );
 
       const num = arrFotosFiltradas.length;
-      textoTags.textContent =
+      textoTags.innerHTML =
         num > 1
-          ? `Se han encontrado ${num} imagenes con el tag ${event.target.textContent}`
-          : `Se ha encontrado ${num} imagen con el tag ${event.target.textContent}`;
+          ? `Se han encontrado <span class="bold">${num}</span> imagenes con el tag <span class="bold">${event.target.textContent}</span>`
+          : `Se ha encontrado <span class="bold">${num}</span> imagen con el tag <span class="bold">${event.target.textContent}</span>`;
 
       imgRelacionadas.innerHTML = "";
 
