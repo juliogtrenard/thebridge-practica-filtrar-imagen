@@ -87,14 +87,14 @@ header.fullContainer p {
   align-items: center;
   flex-wrap: wrap;
   gap: 0 20px;
+  cursor: pointer;
 }
 
 .imgRelacionadas > article {
   text-align: center;
 }
 
-.imgRelacionadas > article .imgContainer img:hover {
-  cursor: pointer;
+.imgRelacionadas > article:hover .imgContainer img {
   filter: brightness(70%);
   scale: calc(0.95);
 }
