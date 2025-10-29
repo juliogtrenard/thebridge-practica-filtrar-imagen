@@ -61,6 +61,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const arrBtn = obtenerTags();
 
   /* FUNCIONES */
+
+  /**
+   * Pinta los botones de los tags disponibles
+   */
   const pintarBotones = () => {
     arrBtn.forEach((e) => {
       const boton = document.createElement("BUTTON");
@@ -72,6 +76,10 @@ document.addEventListener("DOMContentLoaded", () => {
     cajaBotones.append(fragment);
   };
 
+  /**
+   * Obtiene los tags disponibles en las fotos
+   * @returns {Array} Array con los tags disponibles
+   */
   function obtenerTags() {
     const arr = [];
 
