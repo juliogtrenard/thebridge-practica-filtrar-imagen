@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /**
    * Obtiene los tags disponibles en las fotos
-   * @returns {Array} Array con los tags disponibles
+   * @returns Array con los tags disponibles
    */
   function obtenerTags() {
     const arr = [];
@@ -91,6 +91,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
     return arr;
   }
+
+  /**
+   * Pinta las imágenes relacionadas al tag seleccionado
+   * @param e Objeto con la información de la imagen
+   */
+  const pintarImagenes = (e) => {
+    const articulo = document.createElement("ARTICLE");
+    const tituloViaje = document.createElement("P");
+    tituloViaje.textContent = e.titulo;
+    articulo.append(tituloViaje);
+    const divImgRelacionada = document.createElement("DIV");
+    divImgRelacionada.classList.add("imgContainer");
+    const imgRel = document.createElement("IMG");
+    imgRel.src = e.src;
+    imgRel.alt = e.alt;
+    divImgRelacionada.append(imgRel);
+    articulo.append(divImgRelacionada);
+    fragment.append(articulo);
+  };
 
   /* EVENTOS */
   cajaBotones.addEventListener("click", (event) => {
@@ -113,18 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
           imagenGrande.alt = e.alt;
           tituloImagenGrande = e.titulo;
         } else {
-          const articulo = document.createElement("ARTICLE");
-          const tituloViaje = document.createElement("P");
-          tituloViaje.textContent = e.titulo;
-          articulo.append(tituloViaje);
-          const divImgRelacionada = document.createElement("DIV");
-          divImgRelacionada.classList.add("imgContainer");
-          const imgRel = document.createElement("IMG");
-          imgRel.src = e.src;
-          imgRel.alt = e.alt;
-          divImgRelacionada.append(imgRel);
-          articulo.append(divImgRelacionada);
-          fragment.append(articulo);
+          pintarImagenes(e);
         }
       });
 
