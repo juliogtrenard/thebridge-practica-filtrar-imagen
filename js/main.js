@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
   /* FUNCIONES */
 
   /**
-   * Pinta los botones de los tags disponibles
+   * @description Pinta los botones de los tags disponibles
    */
   const pintarBotones = () => {
     arrBtn.forEach((e) => {
@@ -77,8 +77,8 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   /**
-   * Obtiene los tags disponibles en las fotos
-   * @returns Array con los tags disponibles
+   * @description Obtiene los tags disponibles en las fotos
+   * @returns {Array} Array con los tags disponibles
    */
   function obtenerTags() {
     const arr = [];
@@ -93,19 +93,19 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /**
-   * Pinta las imágenes relacionadas al tag seleccionado
-   * @param e Objeto con la información de la imagen
+   * @description Pinta las imágenes relacionadas al tag seleccionado
+   * @param {Object} obj Objeto con la información de la imagen
    */
-  const pintarImagenes = (e) => {
+  const pintarImagenes = (obj) => {
     const articulo = document.createElement("ARTICLE");
     const tituloViaje = document.createElement("P");
-    tituloViaje.textContent = e.titulo;
+    tituloViaje.textContent = obj.titulo;
     articulo.append(tituloViaje);
     const divImgRelacionada = document.createElement("DIV");
     divImgRelacionada.classList.add("imgContainer");
     const imgRel = document.createElement("IMG");
-    imgRel.src = e.src;
-    imgRel.alt = e.alt;
+    imgRel.src = obj.src;
+    imgRel.alt = obj.alt;
     divImgRelacionada.append(imgRel);
     articulo.append(divImgRelacionada);
     fragment.append(articulo);
